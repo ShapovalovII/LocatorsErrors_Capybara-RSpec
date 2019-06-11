@@ -1,0 +1,6 @@
+.idea
+log/
+Gemfile.lock
+LocatorsErrors_Capybara-RSpec.iml
+mkmf.log
+trueautomation.json
