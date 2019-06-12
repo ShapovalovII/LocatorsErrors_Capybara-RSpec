@@ -10,4 +10,6 @@ group(:test) do
   gem 'single_test'
   gem 'rspec-steps'
   gem 'selenium-webdriver'
+
+  gem 'rspec-expectations'
 end

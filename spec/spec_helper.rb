@@ -30,7 +30,6 @@ RSpec.configure do |config|
 
   Capybara.configure do |capybara|
     capybara.run_server = false
-    capybara.default_max_wait_time = 5
 
     capybara.default_driver = :true_automation_driver
   end
@@ -43,4 +42,21 @@ RSpec.configure do |config|
     klass = camelize(base)
     config.include Module.const_get(klass)
   }
+end
+
+def checkErrorMessageTA(withTa, expectedError)
+  find(withTa).click
+rescue Exception => e
+  actualErrorMessageWithTA = e.message
+
+  puts "\n**********************"
+  puts "Expected error: " + expectedError
+  puts "**********************"
+
+  puts "\n**********************"
+  puts "Actual error: " + actualErrorMessageWithTA
+  puts "**********************"
+
+  expect(actualErrorMessageWithTA).to include(expectedError)
+
 end

@@ -5,31 +5,39 @@ feature 'Verification of information output the locators errors' do
     visit 'https://accounts.google.com'
 
     # Missing two slashes "//"
-    find(:xpath, ta('TAname_Valid:Invalid_Xpath', "span[@class='RveJvd snByac']")).click
+    withTALocator = ta('taName', "span[@class='RveJvd snByac']");
+    expError = 'Unable to find visible css "span[@class=\'RveJvd snByac\']__ta__taName__ta__"'
 
+    checkErrorMessageTA(withTALocator, expError)
   end
 
   scenario 'TA locator with invalid css Selector' do
     visit 'https://accounts.google.com'
 
     # Missing dot "."
-    find(:css, ta('TAname_Valid:Invalid_cssSelector', ".RveJvd snByac")).click
+    withTALocator = ta('taName', ".RveJvd snBya");
+    expError = 'Unable to find visible css ".RveJvd snBya__ta__taName__ta__"'
 
+    checkErrorMessageTA(withTALocator, expError)
   end
 
   scenario 'TA locator with invalid id' do
     visit 'https://accounts.google.com'
 
     # The extra two slashes "//"
-    find(:id, ta('TAname_Valid:Invalid_Id', "//identifierId")).click
+    withTALocator = ta('taName', "//identifierId");
+    expError = 'Unable to find visible css "//identifierId__ta__taName__ta__"'
 
+    checkErrorMessageTA(withTALocator, expError)
   end
 
   scenario 'TA locator with invalid link text' do
     visit 'https://accounts.google.com'
 
     # The extra two slashes "//"
-    click_link(ta('TAname_Valid:Invalid_LinkText', "//Справка"))
+    withTALocator = ta('taName', "//Справка");
+    expError = 'Unable to find visible css "//Справка__ta__taName__ta__"'
 
+    checkErrorMessageTA(withTALocator, expError)
   end
 end

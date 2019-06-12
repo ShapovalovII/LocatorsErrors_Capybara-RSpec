@@ -5,7 +5,10 @@ feature 'Verification of information output the locators errors' do
     visit 'https://accounts.google.com'
 
     # The locator name does not exist in the database
-    find(ta('SmartLocator:Not_in_the_database')).click
+    withTALocator = ta('SmartLocator:Not_in_the_database')
+    expError = "Element 'Translate:Rus1' was not found in database. Please provide a selector to find and initialize element."
+
+    checkErrorMessageTA(withTALocator, expError)
 
   end
 end
