@@ -6,7 +6,7 @@ feature 'Verification of information output the locators errors' do
 
     # This locator is made on another page
     withTALocator = ta('Translate:Rus1')
-    expError = "Element 'Translate:Rus1' was not found in database. Please provide a selector to find and initialize element."
+    expError = "NOT_FOUND"
 
     checkErrorMessageTA(withTALocator, expError)
   end

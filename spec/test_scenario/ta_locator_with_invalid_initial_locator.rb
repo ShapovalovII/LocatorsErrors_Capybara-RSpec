@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Verification of information output the locators errors' do
+feature 'Verification of information output the locators errors.' do
   scenario 'TA locator with invalid xpath' do
     visit 'https://accounts.google.com'
 
