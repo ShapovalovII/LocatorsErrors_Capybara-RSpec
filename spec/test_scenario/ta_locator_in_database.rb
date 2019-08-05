@@ -6,7 +6,7 @@ feature 'Verification of information output the locators errors' do
 
     # This locator is made on another page
     withTALocator = ta('Translate:Rus1')
-    expError = "NOT_FOUND"
+    expError = "Element was not found on the page. Element 'Translate:Rus1' with such locator is not on this page and could not be detected by TrueAutomation."
 
     checkErrorMessageTA(withTALocator, expError)
   end
