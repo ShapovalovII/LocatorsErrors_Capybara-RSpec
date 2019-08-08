@@ -6,7 +6,7 @@ feature 'Verification of information output the locators errors.' do
     visit 'https://accounts.google.com'
 
     withTALocator = ta('ta-Name', "//span[@class='RveJvd snByac']")
-    expError = 'TrueAutomation locator ta-Name contains unsupported characters. Please make sure to use only letters, numbers, colon and underscore symbols in locator names.'
+    expError = 'Such TrueAutomation locator name ta-Name can not be used. Locator name may consist of several parts separated by a colon. English letters, numbers and single underscores that are not at the beginning or at the end may be used.'
 
     checkErrorMessageTA(withTALocator, expError)
   end
