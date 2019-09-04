@@ -5,8 +5,8 @@ feature 'Verification of information output the locators errors' do
     visit 'https://accounts.google.com'
 
     # This locator is made on another page
-    withTALocator = ta('Translate:Rus1')
-    expError = "Element was not found on the page. Element 'Translate:Rus1' with such locator is not on this page and could not be detected by TrueAutomation."
+    withTALocator = ta('Google:Translate')
+    expError = "Element was not found on the page. Element 'Google:Translate' with such locator is not on this page and could not be detected by TrueAutomation."
 
     checkErrorMessageTA(withTALocator, expError)
   end
