@@ -5,8 +5,8 @@ feature 'Verification of information output the locators errors.' do
     visit 'https://accounts.google.com'
 
     # Missing two slashes "//"
-    withTALocator = ta('taName', "span[@class='RveJvd snByac']");
-    expError = 'Unable to find visible css "span[@class=\'RveJvd snByac\']__ta__taName__ta__"'
+    withTALocator = ta('taName', "span[@class='RveJvd snByac']")
+    expError = 'Unable to find visible css "span[@class=\'RveJvd snByac\']"'
 
     checkErrorMessageTA(withTALocator, expError)
   end
@@ -15,8 +15,8 @@ feature 'Verification of information output the locators errors.' do
     visit 'https://accounts.google.com'
 
     # Missing dot "."
-    withTALocator = ta('taName', ".RveJvd snBya");
-    expError = 'Unable to find visible css ".RveJvd snBya__ta__taName__ta__"'
+    withTALocator = ta('taName', ".RveJvd snBya")
+    expError = 'Unable to find visible css ".RveJvd snBya"'
 
     checkErrorMessageTA(withTALocator, expError)
   end
@@ -25,8 +25,8 @@ feature 'Verification of information output the locators errors.' do
     visit 'https://accounts.google.com'
 
     # The extra two slashes "//"
-    withTALocator = ta('taName', "//identifierId");
-    expError = 'Unable to find visible css "//identifierId__ta__taName__ta__"'
+    withTALocator = ta('taName', "//identifierId")
+    expError = 'Unable to find visible css "//identifierId"'
 
     checkErrorMessageTA(withTALocator, expError)
   end
@@ -35,8 +35,8 @@ feature 'Verification of information output the locators errors.' do
     visit 'https://accounts.google.com'
 
     # The extra two slashes "//"
-    withTALocator = ta('taName', "//Справка");
-    expError = 'Unable to find visible css "//Справка__ta__taName__ta__"'
+    withTALocator = ta('taName', "//Справка")
+    expError = 'Unable to find visible css "//Справка"'
 
     checkErrorMessageTA(withTALocator, expError)
   end
