@@ -6,7 +6,7 @@ feature 'Verification of information output the locators errors.' do
 
     # Missing two slashes "//"
     withTALocator = ta('taName', "span[@class='RveJvd snByac']")
-    expError = 'Unable to find visible css "span[@class=\'RveJvd snByac\']"'
+    expError = "Unable to locate element { using: 'css selector', selector: 'span[@class='RveJvd snByac']' }"
 
     checkErrorMessageTA(withTALocator, expError)
   end
@@ -16,7 +16,7 @@ feature 'Verification of information output the locators errors.' do
 
     # Missing dot "."
     withTALocator = ta('taName', ".RveJvd snBya")
-    expError = 'Unable to find visible css ".RveJvd snBya"'
+    expError = "Unable to locate element { using: 'css selector', selector: '.RveJvd snBya' }"
 
     checkErrorMessageTA(withTALocator, expError)
   end
@@ -26,7 +26,7 @@ feature 'Verification of information output the locators errors.' do
 
     # The extra two slashes "//"
     withTALocator = ta('taName', "//identifierId")
-    expError = 'Unable to find visible css "//identifierId"'
+    expError = "Unable to locate element { using: 'css selector', selector: '//identifierId' }"
 
     checkErrorMessageTA(withTALocator, expError)
   end
@@ -36,7 +36,7 @@ feature 'Verification of information output the locators errors.' do
 
     # The extra two slashes "//"
     withTALocator = ta('taName', "//Справка")
-    expError = 'Unable to find visible css "//Справка"'
+    expError = "Unable to locate element { using: 'css selector', selector: '//Справка' }"
 
     checkErrorMessageTA(withTALocator, expError)
   end
